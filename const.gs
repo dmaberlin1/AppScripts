@@ -1,0 +1,1 @@
+const VAL='test doc'

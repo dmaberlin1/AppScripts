@@ -1,0 +1,22 @@
+{
+  "timeZone": "Europe/Kyiv",
+  "dependencies": {
+  },
+  "webapp": {
+    "access": "ANYONE",
+    "executeAs": "USER_DEPLOYING"
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [{
+      "menuName": "test1",
+      "functionName": "test1",
+      "defaultShortcut": "Ctrl+Alt+Shift+1"
+    }, {
+      "menuName": "headers_fill",
+      "functionName": "headers_fill",
+      "defaultShortcut": "Ctrl+Alt+Shift+2"
+    }]
+  }
+}
