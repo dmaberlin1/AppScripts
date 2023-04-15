@@ -10,3 +10,9 @@ function headers_fill() {
   spreadsheet.getRange('A1:K2').activate();
   spreadsheet.getActiveRangeList().setBackground('#434343');
 };
+
+function Formatted_Title() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+  spreadsheet.getActiveSheet().setFrozenRows(1)
+};

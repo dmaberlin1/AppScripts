@@ -17,6 +17,10 @@
       "menuName": "headers_fill",
       "functionName": "headers_fill",
       "defaultShortcut": "Ctrl+Alt+Shift+2"
+    }, {
+      "menuName": "Formatted_Title",
+      "functionName": "Formatted_Title",
+      "defaultShortcut": "Ctrl+Alt+Shift+3"
     }]
   }
 }
