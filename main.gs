@@ -63,7 +63,21 @@ function addHeaders(){
 
 
 
+
+
+
+
+
+
+
 //**********************UI ******************/
+//**********************UI ******************/
+//**********************UI ******************/
+
+
+
+// var ss=SpreadsheetApp.getActiveSpreadsheet()
+// var sheet_db_active=ss.getSheetByName('db_active')
 
 function onOpen() {
     var ui=SpreadsheetApp.getUi();
@@ -75,5 +89,37 @@ function onOpen() {
     .addItem('btn2','func3')
     .addSeparator()
     .addItem('btn2','func4')
+    .addToUi()
+
+     ui.createMenu('Custom Menu2')
+    .addItem('get border','getBorder')
+    .addSeparator()
+    .addItem('remove border ','removeBorder')
     .addToUi();
+}
+
+function onEdit() {
+    getBorder()
+    
+}
+
+
+function getBorder() {
+    var ss=SpreadsheetApp.getActiveSpreadsheet()
+    // var sheet=ss.getSheetByName('db_active')
+    var sheet=ss.getActiveSheet()
+    var lr=sheet.getLastRow();
+    var lc=sheet.getLastColumn();
+    sheet.getRange('A:P').setBorder(false,false,false,false,false,false,'#000',SpreadsheetApp.BorderStyle.DOUBLE)
+    sheet.getRange(1,1,lr,lc).setBorder(true,true,true,true,true,true,'#000',SpreadsheetApp.BorderStyle.SOLID)
+    
+}
+
+function removeBorder() {
+    var ss=SpreadsheetApp.getActiveSpreadsheet()
+    var sheet=ss.getActiveSheet()
+    var lr=sheet.getLastRow();
+    var lc=sheet.getLastColumn();
+    sheet.getRange(1,1,lr+1,lc+1).setBorder(false,false,false,false,false,false,'#000',SpreadsheetApp.BorderStyle.DOUBLE)
+    // sheet.getRange(1,1,lr,lc).setBorder(true,true,true,true,true,true,'#000',SpreadsheetApp.BorderStyle.SOLID)
 }
